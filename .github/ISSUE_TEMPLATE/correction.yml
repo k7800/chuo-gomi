@@ -1,0 +1,24 @@
+name: 情報の訂正・更新依頼
+description: ごみ分別または収集曜日の誤り・更新を知らせる
+title: "[訂正] "
+labels: ["data-correction"]
+body:
+  - type: markdown
+    attributes:
+      value: "個人情報や正確な住所は入力しないでください。公式情報のURLがあれば添えてください。"
+  - type: input
+    id: item
+    attributes:
+      label: 対象の品目または町名
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 訂正内容
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: 公式情報のURL（任意）
